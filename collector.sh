@@ -4,7 +4,7 @@ echo
 echo !!!IMPORTANT!!! RUN USING SUDO
 echo
 echo Usage: enter the name of the user directory you want zipped
-USERNAME="nul"
+echo
 until [ -d /Users/$USERNAME ]
 do
     if [ $USERNAME == "exit" ]
@@ -16,7 +16,6 @@ do
         read -p "User's name: " USERNAME
     fi
 done
-
 date=`date +%F`
 mkdir ~/Desktop/$USERNAME-$date
 cp -R /Users/$USERNAME/Desktop ~/Desktop/$USERNAME-$date
